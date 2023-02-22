@@ -3,6 +3,8 @@
 
 int main()
 {
-    printf("Hello world!\n");
+    float number;
+    scanf("%f", &number);
+    printf("%.2f", number);
     return 0;
 }
