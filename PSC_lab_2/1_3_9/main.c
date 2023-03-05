@@ -17,17 +17,17 @@ int main()
   if(act == '+')
   {
     result = number_1 + number_2;
-    printf("%.2lf + %.2lf = %.2lf", number_1, number_2, result);
+    printf("%lf + %lf = %lf", number_1, number_2, result);
   }
   else if(act == '-')
   {
     result = number_1 - number_2;
-    printf("%.2lf - %.2lf = %.2lf", number_1, number_2, result);
+    printf("%lf - %lf = %lf", number_1, number_2, result);
   }
   else if(act == '*')
   {
     result = number_1 * number_2;
-    printf("%.2lf * %.2lf = %.2lf", number_1, number_2, result);
+    printf("%lf * %lf = %lf", number_1, number_2, result);
   }
   else if(act == '/')
   {
@@ -35,7 +35,7 @@ int main()
       printf("Error: division by zero");
     } else {
       result = number_1 / number_2;
-      printf("%.2lf / %.2lf = %.2lf", number_1, number_2, result);
+      printf("%lf / %lf = %lf", number_1, number_2, result);
     }
   }
   else
