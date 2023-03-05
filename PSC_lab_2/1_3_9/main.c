@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 int main()
 {
   char act;
@@ -17,7 +17,7 @@ int main()
   if(act == '+')
   {
     result = number_1 + number_2;
-    printf("%lf + %lf = %lf", number_1, number_2, result);
+    printf("%.2lf + %.2lf = %.2lf", number_1, number_2, result);
   }
   else if(act == '-')
   {
