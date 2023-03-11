@@ -6,7 +6,7 @@ int function(unsigned int n, unsigned int m){
     return n;
  }
  else if (n >= m){
-    return n - m + function(n -1,m)+function(n,m-1);
+    return n - m + function(n-1,m)+function(n,m-1);
  }
  else{
     return function(m,n);
