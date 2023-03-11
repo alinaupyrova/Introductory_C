@@ -9,7 +9,7 @@ int function(unsigned int n){
 }
 int main()
 {
-    unsigned int n = 4;
+   unsigned int n = 4;
    int result = function(n);
    printf("The number under index %d is %d",n, result);
 }
