@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 void foo(int const * a, int *b){
- int temp = *b;
  *b = *a;
- temp = *a;
 }
 int main()
 {
