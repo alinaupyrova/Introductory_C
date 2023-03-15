@@ -1,13 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int foo(){
-
+int * foo(){
    return malloc(sizeof(int));
 }
 int main()
 {
-    int a = 4;
-    printf("a = %d", foo(&a));
+    int *a = foo();
+    printf("%p\n", a);
     return 0;
 }
