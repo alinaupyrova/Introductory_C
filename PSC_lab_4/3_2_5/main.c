@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-int sum(int *a, int *b){
+int sum(int const *a, int const *b){
   int temp = *a + *b;
   return temp;
 }
