@@ -10,10 +10,8 @@ int foo7(int n, int tab1[], int tab2[], int tab3[])
         sum = tab1[i] + tab2[i];
         tab3[i] = sum;
     }
-
 }
-
-void print_array3(int n, int tab3[])
+void print_tab3(int n, int tab3[])
 {
     for(int i=0;i<n;i++)
     {
@@ -26,6 +24,6 @@ int main()
     int tab2[] = {2,5,6,-1};
     int tab3[] = {};
     foo7(4, tab1, tab2, tab3);
-    print_array3(4,tab3);
+    print_tab3(4,tab3);
     return 0;
 }
