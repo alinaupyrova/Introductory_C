@@ -5,7 +5,7 @@ void foo(int n, int tab[])
 {
     for(int i=0;i<n;i++)
     {
-        tab[i] *= 2;
+        tab[i]= abs(tab[i]);
     }
 }
 
