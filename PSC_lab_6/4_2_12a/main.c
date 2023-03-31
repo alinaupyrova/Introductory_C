@@ -6,9 +6,9 @@ void function(int n, int *tab)
     int temp;
     for(int i = 0; i < n/2; i++)
     {
-        temp = *(tab + i);
-        *(tab + i) = *(tab + n - 1 - i);
-        *(tab + n - 1 - i) = temp;
+       temp = tab[i];
+        tab[i] = tab[n - 1 - i];
+        tab[n - 1 - i] = temp; 
     }
 }
 int main()
