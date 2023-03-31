@@ -1,22 +1,16 @@
-
 #include <stdio.h>
 #include <stdlib.h>
-int foo( const int (*p_1)(int), int * const(p_2)(int), unsigned int n) {
-    int roznica = p_1(n)- p_2(n);
+int foo(const int *p_1, int *const p_2) {
+    int roznica = *p_1 - *p_2;
     return roznica;
 
 }
-int pom_1(int x)
-{
-    return  x+2;
-}
-int pom_2(int x)
-{
-    return (x+2)%10;
-}
 int main()
 {
-    printf("Roznica jest rowna %d\n",foo(pom_1, pom_2, 3));
-    printf("Roznica jest rowna %d\n",foo(pom_1, pom_2, 6));
+    int x = 5;
+    int y = 4;
+    const int *p_1 = &x;
+    const int *p_2 = &y;
+    printf("Roznica jest rowna %d\n",foo(p_1, p_2));
     return 0;
 }
