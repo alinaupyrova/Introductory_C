@@ -21,7 +21,7 @@ int main()
     function(n, tab1, tab2, tab3);
     for(int i = 0; i < 2 * n; i++)
     {
-        printf("%lf\n", tab3[i]);
+        printf("%lf\n", *(tab3+i));
     }
     return 0;
 }
