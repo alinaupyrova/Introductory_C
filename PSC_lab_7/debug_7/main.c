@@ -22,3 +22,4 @@ int main()
     b = *wsk + e; // b=56  , c=23  , d=48  , e=52
     return 0;
 }
+
