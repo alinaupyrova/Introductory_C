@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void foo(double* tab) {
+void foo(double* tablica) {
     if(tab != NULL){
          free(tab);
     }
