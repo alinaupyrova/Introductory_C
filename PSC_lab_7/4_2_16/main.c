@@ -1,8 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
-    printf("Hello world!\n");
+void foo(double* tab) {
+    if(tab != NULL){
+         free(tab);
+    }
+    else{
+         printf("Array is empty");
+    }
+}
+
+int main() {
+    double* tablica = (double*) malloc(sizeof(double));
+    foo(tablica);
     return 0;
 }
