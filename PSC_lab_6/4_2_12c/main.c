@@ -8,8 +8,8 @@ void function(int n, int *tab)
     for(int i = 0; i < n - 1; i++)
     {
       tab[i+1] = tab[i];
-      tab[0] = temp;
     }
+      tab[0] = temp;
 }
 int main()
 {
