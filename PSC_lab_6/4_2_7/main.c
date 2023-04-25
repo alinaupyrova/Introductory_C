@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-int foo7(int n, int tab1[], int tab2[], int tab3[])
+void foo7(int n, int tab1[], int tab2[], int tab3[])
 {
     int sum = 0;
     for(int i = 0; i < n; i++)

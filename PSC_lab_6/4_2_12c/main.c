@@ -4,12 +4,13 @@
 
 void function(int n, int *tab)
 {
-    int temp = tab[0];
-    for(int i = 0; i < n - 1; i++)
+    int temp = tab[n-1];
+    for(int i = n-2; i >= 0; i--)
     {
       tab[i+1] = tab[i];
-      tab[0] = temp;
     }
+            tab[0] = temp;
+
 }
 int main()
 {
