@@ -2,7 +2,7 @@
 #include <stdlib.h>
 int **alokuj(int n , int m)
 {
-   int ** tab = malloc(n*sizeof(int*));
+   int ** tab =malloc(n*sizeof(int*));
    for(int i = 0; i < n; i++){
     tab[i] = malloc(m*sizeof(int));
    }
