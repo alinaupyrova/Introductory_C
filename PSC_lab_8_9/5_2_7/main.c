@@ -9,6 +9,7 @@ for(i = 0; nap1[i] != 0; i++){
 for(j = 0; nap2[j] != 0; i++,j++){
     nap3[i] = nap2[j];
 }
+nap3[i] = '\0';
 }
 int main()
 {
