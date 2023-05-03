@@ -33,15 +33,15 @@ int ***alokuj2(int n, int m , int k)
 
 void zwolnij(int *** tab, int n, int m, int k)
 {
-  for(int i = 0; i < n; i++)
+    for(int i = 0; i < n; i++)
     {
-    for(int j =0; j < n; j++)
-    {
-     free(tab[i][j]);
+        for(int j =0; j < m; j++)
+        {
+            free(tab[i][j]);
+        }
+        free(tab[i]);
     }
-  free(tab[i]);
-  }
-  free(tab);
+    free(tab);
 }
 
 int main()
