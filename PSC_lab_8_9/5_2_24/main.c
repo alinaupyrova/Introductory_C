@@ -37,32 +37,3 @@ int main(){
 }
 
 
-// Second case 
-
-#include <stdio.h>
-#include <string.h> // для функції strcpy
-#include <wchar.h>
-
-void kopiuj(char* napis, char* tablica){
-    strcpy(tablica, napis);
-}
-
-void kopiuj_wchar(wchar_t* napis, wchar_t* tablica){
-    wcscpy(tablica, napis); 
-}
-
-int main(){
-    char napis_char[] = "Ala ma kota";
-    wchar_t napis_wchar[] = L"ala ma kota";
-    char tablica_char[20];
-    wchar_t tablica_wchar[20];
-    kopiuj(napis_char, tablica_char);
-    kopiuj_wchar(napis_wchar, tablica_wchar);
-    printf("%s\n", tablica_char);
-    wprintf(L"%s\n", tablica_wchar);
-
-    return 0;
-}
-
-
-
