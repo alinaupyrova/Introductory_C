@@ -1,9 +1,6 @@
 
-
-// Second case 
-
 #include <stdio.h>
-#include <string.h> // для функції strcpy
+#include <string.h> // for function strcpy
 #include <wchar.h>
 
 void kopiuj(char* napis, char* tablica){
