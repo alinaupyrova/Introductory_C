@@ -1,54 +1,60 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 struct element
 {
     int i;
-    struct element * next;
+    struct element *next;
 };
-int sumaBG(struct element * lista)
+
+int sumaBG(struct element *lista)
 {
     int suma = 0;
-    while(lista != NULL)
+    while (lista != NULL)
     {
-        suma += lista-> i;
-        lista = lista -> next;
+        suma += lista->i;
+        lista = lista->next;
     }
     return suma;
 }
-int sumaZG(struct element * lista)
+
+int sumaZG(struct element *lista)
 {
     int suma = 0;
-    while(lista -> next == NULL)
+    struct element *wsk = lista->next;  // Починаємо з наступного елемента
+    while (wsk != NULL)
     {
-        suma += lista;
-        lista = lista -> next;
+        suma += wsk->i;
+        wsk = wsk->next;
     }
     return suma;
 }
-void wyswietkListeZGlowa(struct element * lista)
+
+void wyswietkListeZGlowa(struct element *lista)
 {
-    if (lista -> next == NULL)
+    if (lista->next == NULL)
     {
         printf("Lista jest pusta\n---\n");
         return;
     }
-    struct element * wsk = lista->next;
-    while(wsk != NULL)
+    struct element *wsk = lista->next;
+    while (wsk != NULL)
     {
-        printf("%d\n",wsk->i);
-        wsk=wsk->next;
+        printf("%d\n", wsk->i);
+        wsk = wsk->next;
     }
     printf("---\n");
 }
-void wyswietlBG(struct element * lista)
+
+void wyswietlBG(struct element *lista)
 {
-     if (lista == NULL)
+    if (lista == NULL)
     {
         printf("Lista jest pusta\n");
         return;
     }
-    struct element * wsk = lista;
-    while(wsk != NULL)
+    struct element *wsk = lista;
+    while (wsk != NULL)
     {
         printf("%d\n", wsk->i);
         wsk = wsk->next;
@@ -78,7 +84,7 @@ int main()
 
     wyswietkListeZGlowa(lista1);
     printf("%d\n", sumaZG(lista1));
-
+   printf("--------------\n");
     wyswietlBG(lista2);
     printf("%d\n", sumaBG(lista2));
     return 0;
