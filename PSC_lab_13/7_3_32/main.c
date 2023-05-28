@@ -14,30 +14,25 @@ struct element *zlozListy(struct element *lista1, struct element *lista2)
 
     while (lista1 != NULL && lista2 != NULL)
     {
-        struct element *nowyElement1 = malloc(sizeof(struct element));
-        nowyElement1->i = lista1->i;
-        nowyElement1->next = NULL;
+        struct element *nowyElement1 = lista1;
+        lista1 = lista1->next;
+
+        struct element *nowyElement2 = lista2;
+        lista2 = lista2->next;
+
+        nowyElement1->next = nowyElement2;
+        nowyElement2->next = NULL;
 
         if (nowaLista == NULL)
         {
             nowaLista = nowyElement1;
-            tail = nowyElement1;
+            tail = nowyElement2;
         }
         else
         {
             tail->next = nowyElement1;
-            tail = nowyElement1;
+            tail = nowyElement2;
         }
-
-        struct element *nowyElement2 = malloc(sizeof(struct element));
-        nowyElement2->i = lista2->i;
-        nowyElement2->next = NULL;
-
-        tail->next = nowyElement2;
-        tail = nowyElement2;
-
-        lista1 = lista1->next;
-        lista2 = lista2->next;
     }
 
     return nowaLista;
