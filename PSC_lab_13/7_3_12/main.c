@@ -7,23 +7,23 @@ struct element
     struct element* next;
 };
 
-void dodaj(struct element** Lista, int a)
+struct element* dodaj(struct element* Lista, int a)
 {
     struct element* nowyElement = (struct element*)malloc(sizeof(struct element));
 
     nowyElement->i = a;
-    nowyElement->next = *Lista;
+    nowyElement->next = Lista;
 
-    *Lista = nowyElement;
+    return nowyElement;
 }
 
 int main()
 {
     struct element* lista = NULL;
 
-    dodaj(&lista, 3);
-    dodaj(&lista, 2);
-    dodaj(&lista, 1);
+    lista = dodaj(lista, 3);
+    lista = dodaj(lista, 2);
+    lista = dodaj(lista, 1);
 
     struct element* aktualny = lista;
 
@@ -39,5 +39,7 @@ int main()
         struct element* temp = aktualny;
         aktualny = aktualny->next;
         free(temp);
-       return 0;
+    }
+
+    return 0;
 }
